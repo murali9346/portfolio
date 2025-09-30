@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diddukuru Muralidhar | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <script>
+const roles = ["AIML Student", "Python Developer", "Web Developer"];
+let i = 0, j = 0, current = "", isDeleting = false;
+
+function type() {
+  current = roles[i];
+  document.getElementById("typing").textContent = current.substring(0, j);
+
+  if (!isDeleting && j < current.length) {
+    j++;
+    setTimeout(type, 100);
+  } else if (isDeleting && j > 0) {
+    j--;
+    setTimeout(type, 50);
+  } else {
+    isDeleting = !isDeleting;
+    if (!isDeleting) i = (i + 1) % roles.length;
+    setTimeout(type, 1000);
+  }
+}
+type();
+</script>
+
+
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+    <button onclick="document.body.classList.toggle('dark')" style="margin-left:20px; padding:6px 12px; border:none; border-radius:5px; cursor:pointer;">🌙</button>
+
+  </nav>
+
+  <!-- Hero Section -->
+ <header>
+  <div>
+    <h1>Hi, I'm Diddukuru Muralidhar</h1>
+   
+  </div>
+</header>
+
+
+  <!-- About -->
+ 
+  <section id="about">
+  <h2>About Me</h2>
+  <div style="text-align:center;">
+    <img src="image jpg.jpg" alt="Mahesh Kumar" style="width:180px;height:180px;border-radius:50%;box-shadow:0 4px 10px rgba(0,0,0,0.3);margin-bottom:20px;">
+    <p style="max-width:800px;margin:auto;">
+      I am Muralidhar, pursuing B.Tech in Artificial Intelligence and Data Science at kalasalingam academy of research and education with a CGPA of 8.52. 
+      I am passionate about building innovative projects, solving real-world problems with AI, and exploring opportunities in Web Development, Python.
+    </p>
+  </div>
+</section>
+
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education">
+      <div class="card">
+        <h3>kalasalingam academy of research and education</h3>
+        <p>B.Tech in AIML (2021 - 2025)</p>
+        <p>CGPA: 8.52</p>
+      </div>
+      <div class="card">
+        <h3>Sri Chaitanya Junior College</h3>
+        <p>Intermediate (MPC) (2019 - 2021)</p>
+        <p>Percentage: 83%</p>
+      </div>
+      <div class="card">
+        <h3>sri sai (E.M) High School</h3>
+        <p>SSC (2018 - 2019)</p>
+        <p>Percentage: 90%</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <div class="card">⚡ Python</div>
+      <div class="card">🗄 SQL</div>
+      <div class="card">🌐 HTML, CSS, JavaScript</div>
+      <div class="card">⚙ Django</div>
+      <div class="card">🤖 AI & Machine Learning</div>
+    </div>
+  </section>
+  <!--certifications-->
+  <section id="certifications">
+  <h2>Certifications</h2>
+  <div class="skills">
+    <div class="card">✅ AI-ML</div>
+    <div class="card">✅ ML</div>
+    <div class="card">✅ NPTEL – IIOT </div>
+  </div>
+</section>
+
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>DISPOSITION BASED MUSIC PROPOSAL FRAMEWORK</h3>
+        <p>A user's facial expressions might reveal their mood or emotional state. The camera on the device can be used to infer these expressions from the live stream. In the field of computer vision and machine learning (ML), a great deal of research is being done on teaching robots to recognize different human emotions or moods. Machine learning offers a number of methods for identifying human emotions. Our suggested approach creates a mood-based music player that makes song recommendations based on real-time mood recognition. This turns into an extra feature for the standard music player apps that are already pre-installed on our phones. Customer satisfaction is a key advantage of integrating mood detection. This system's goals are to analyze the user's image, forecast their facial expression, and recommend music that fits their identified mood.The goal of the Disposition-based Music Proposal Framework project is to transform the way that music is selected and suggested for people according to their tastes, emotional state, and environment. Conventional music suggestion systems frequently depend on general criteria like artist, genre, or popularity, which might not necessarily be in line with the user's particular situation or emotional state at the time. By placing the user's emotional state front and center, this initiative aims to provide a more sophisticated and customized method of music suggestion. The concept entails creating algorithms and software that can assess your present state of mind or circumstance and then suggest suitable musical selections. It might determine your mood by analyzing things like your listening preferences in the past, your present activity level, or even information from wearable technology.For instance, it recommends lively music while you're feeling well or soothing instrumental music when you're studying..</p>
+      
+  </section>
+
+  <!-- Resume -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <a href="Murali_Full_stack_developer11.pdf" class="resume-btn" target="_blank">📄 Download Resume</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center;">📧 
+      <a href="mailto:muralidhar63055@gmail.com">muralidhar63055@gmail.com</a>
+    </p>
+    <p style="text-align:center;">📱 9346432020</p>
+    <p style="text-align:center;">🔗 
+      <a href="https://www.linkedin.com/in/murali-dhar-28a0b9279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+    </p>
+  </section>
+  <form action="mailto:maheshkumartammisetti06@gmail.com" method="post" enctype="text/plain" style="text-align:center; margin-top:20px;">
+  <input type="text" name="name" placeholder="Your Name" required style="padding:10px;width:250px;margin:5px;"><br>
+  <input type="email" name="email" placeholder="Your Email" required style="padding:10px;width:250px;margin:5px;"><br>
+  <textarea name="message" placeholder="Your Message" required style="padding:10px;width:250px;margin:5px;"></textarea><br>
+  <button type="submit" style="padding:10px 20px;background:#ff9800;color:#fff;border:none;border-radius:5px;cursor:pointer;">Send</button>
+</form>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 DIDDUKURU MURALIDHAR | Built with ❤ using HTML & CSS</p>
+  </footer>
+
+</body>
+</html>
